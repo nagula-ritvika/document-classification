@@ -1,7 +1,7 @@
 ### document-classification-task
 
 In this project, I have trained a Random Forest Classifier on documents containing hashed data. I have created a Flask app
-which takes in an input document and tries to classify it based on the target labels available at training time.
+which takes in an input document and tries to classify it based on the target labels available at training time. I have achieved an accuracy of `~84%`.
 
 The `train_model.py` used the given shuffled data to train the classifier and saves the `tf-idf-vectorizer` and the `trained model` so that they can be used later for testing/classifying live samples.
 
