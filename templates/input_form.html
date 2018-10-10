@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        p {
+            font-family: sans-serif;
+        }
+        .result {
+            font-weight: bold;
+        }
+    </style>
+    <title>Document Classifier</title>
+</head>
+
+<body>
+    <div style="padding-left: 20px; ">
+        <h3>Document Classification using a Random Forest Classifier</h3>
+        <p>Give any input document:</p>
+
+        <div class="form">
+            <form method="POST">
+                <input name="test_doc" style="height: 20px;border-radius: 1px;width: 335px;">
+                <input style="background-color: lightsteelblue;border-radius: 5px;padding: 5px 40px;" type="submit">
+            </form>
+        </div>
+
+
+        {% if predicted_label %}
+        <p>The document is classified as a
+            <span class="result">{{predicted_label}} </span>
+            document with
+            <span class="result">{{confidence}}% </span>
+            confidence.</p>
+        {% endif %}
+
+        {% if empty_input %}
+        <p>Please do not give empty inputs!</p>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>
